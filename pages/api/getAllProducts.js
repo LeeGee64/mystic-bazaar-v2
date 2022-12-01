@@ -13,9 +13,14 @@ export default function getAllProducts() {
     //Handle the loading state
     if (!data) return <div>Loading...</div>;
     
+    let productObject = JSON.parse(data);
+  let productArray = productObject.products;
+
     return (
         //return preview cards of products
-        <></>
+        <div>
+            {productArray.map((d) => (<p>Name: {d.name} ; ID: {d.id}</p>))}
+        </div>
     );
 
 }
