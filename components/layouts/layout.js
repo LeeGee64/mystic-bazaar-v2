@@ -5,54 +5,37 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 
-export const siteTitle = 'Library of Solomon';
+export const siteTitle = 'Mystic Bazaar';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children}) {
   return (
     <div className={styles.container}>
       <Head>
         <meta
           name="description"
-          content="A sample library navigation app built with Next.js and MongoDB."
+          content="A sample e-commerce site built with Next.Js."
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
 
       <header className={styles.header}>
             
-      {home ? (
-          <>
-            <h1 id="top" className={utilStyles.heading2Xl}>{siteTitle}</h1>
-          </>
-        ) : (
-          <>
+        
             <h1 id="top" className={utilStyles.heading2XL}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{siteTitle}</a>
+               {siteTitle}
               </Link>
             </h1>
-          </>
-        )}
       <nav className= {styles.nav}>
           <ul className= {styles.navList}>
             <li id="Home" className= {styles.navItem}>
               <Link href= '/'>
-                  <a className= {styles.navName}>Home</a>
+               Home
               </Link>
             </li>
             <li id="BookSearch" className= {styles.navItem}>
-              <Link href= '/booksearch'>
-                  <a className= {styles.navName}>Search</a>
-              </Link>
-            </li>
-            <li id="Directory" className= {styles.navItem}>
-              <Link href= '/directory'>
-                  <a className= {styles.navName}>Directory</a>
-              </Link>
-            </li>
-            <li id="About" className= {styles.navItem}>
-              <Link href= '/about'>
-                  <a className= {styles.navName}>About</a>
+              <Link href= '/search'>
+                  Search
               </Link>
             </li>
           </ul>
