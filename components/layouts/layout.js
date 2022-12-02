@@ -5,9 +5,12 @@ import styles from './layout.module.css';
 import Link from 'next/link';
 
 
+
 export const siteTitle = 'Mystic Bazaar';
 
-export default function Layout({ children}) {
+
+export default function Layout({children}) {
+
   return (
     <div>
       <Head>

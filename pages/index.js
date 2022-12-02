@@ -3,13 +3,24 @@ import Image from 'next/image'
 import getAllProducts from './api/getAllProducts'
 import Layout from '/components/layouts/layout' 
 import Preview from '/components/products/preview'
+import useSWR from 'swr';
 
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
-  const apiUrl = './api/staticdata';
-  const prodArray = (getAllProducts(apiUrl));
-  console.log(prodArray)
+let apiUrl = './api/staticdata';
 
+const { data, error } = useSWR(apiUrl, fetcher);
+
+    //Handle the error state
+    if (error) return <div>Failed to load</div>;
+    //Handle the loading state
+    if (!data) return <div>Loading...</div>;
+    
+    let productObject = JSON.parse(data);
+  let productArray = productObject.products;
+
+ 
   return (
       <Layout>
         <section id="intro">
@@ -19,14 +30,23 @@ export default function Home() {
             practice worry-free!</p>
         </section>
         <section id="latest">
+          <h2>Latest</h2>
           <ul>
-           {prodArray.map((p)=> (<li key={p.id}><Preview productItem= {p}/></li>))}
+           {productArray.map((p)=> (<li key={p.id}><Preview productItem= {p}/></li>))}
           </ul>
-          {/* {prodArray[0].name} */}
         </section>
-        <section id="category"></section>
-        <section id="collection"></section>
-        <section id="whatis"></section>
+        <section id="category">
+          <h2>Categories</h2>
+        </section>
+        <section id="collection">
+          <h2>Collections</h2>
+        </section>
+        <section id="whatis">
+          <h2>What is this Place?</h2>
+          <p>Short answer: A nexus for magic and wonder.</p>
+          <p>Longer answer: alaffjosiosdiohsdfhiosdfhiofhioasdfio</p>
+        </section>
       </Layout>
   )
 }
+
