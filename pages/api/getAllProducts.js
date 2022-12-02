@@ -3,10 +3,11 @@ import useSWR from 'swr';
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = (url) => fetch(url).then((res) => res.json());
+// let apiUrl = '/api/staticdata';
 
-export default function getAllProducts() {
+export default function getAllProducts(apiUrl) {
     
-    const { data, error } = useSWR('/api/staticdata', fetcher);
+    const { data, error } = useSWR(apiUrl, fetcher);
 
     //Handle the error state
     if (error) return <div>Failed to load</div>;
@@ -16,11 +17,6 @@ export default function getAllProducts() {
     let productObject = JSON.parse(data);
   let productArray = productObject.products;
 
-    return (
-        //return preview cards of products
-        <div>
-            {productArray.map((d) => (<p>Name: {d.name} ; ID: {d.id}</p>))}
-        </div>
-    );
+    return (Object.values(productArray));
 
 }

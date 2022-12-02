@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
+// import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 
@@ -9,7 +9,7 @@ export const siteTitle = 'Mystic Bazaar';
 
 export default function Layout({ children}) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <meta
           name="description"
@@ -18,22 +18,21 @@ export default function Layout({ children}) {
         <meta name="og:title" content={siteTitle} />
       </Head>
 
-      <header className={styles.header}>
+      <header >
             
-        
-            <h1 id="top" className={utilStyles.heading2XL}>
-              <Link href="/">
-               {siteTitle}
-              </Link>
-            </h1>
-      <nav className= {styles.nav}>
-          <ul className= {styles.navList}>
-            <li id="Home" className= {styles.navItem}>
+      <h1 id="top" >
+        <Link href="/">
+          {siteTitle}
+        </Link>
+      </h1>
+      <nav>
+          <ul>
+            <li id="Home">
               <Link href= '/'>
                Home
               </Link>
             </li>
-            <li id="BookSearch" className= {styles.navItem}>
+            <li id="BookSearch">
               <Link href= '/search'>
                   Search
               </Link>
@@ -43,48 +42,44 @@ export default function Layout({ children}) {
       </header>
     
 
-      <main className= {styles.main}>{children}</main>
+      <main >{children}</main>
       
       
-      <footer id="footer" className={styles.footer}>
-        <div className={styles.linkList}>
-          <a className={utilStyles.logo} href="https://twitter.com/LeeGee64">
+      <footer id="footer">
+        <div>
+          <a href="https://twitter.com/LeeGee64">
           <Image
                 priority
                 src="/Images/logos/2021-Twitter-logo-blue.png"
                 height= {30}
                 width= {30}
-                className={utilStyles.logo}
                 alt="Twitter"
               />
             </a>
-          <a className={utilStyles.logo} href="https://www.instagram.com/who_is_lee888/">
+          <a href="https://www.instagram.com/who_is_lee888/">
             <Image
                 priority
                 src="/Images/logos/Instagram_Glyph_Gradient.png"
                 height= {30}
                 width= {30}
-                className={utilStyles.logo}
                 alt="Instagram"
               />
             </a>
-          <a className={utilStyles.logo} href="https://github.com/LeeGee64/occult-library-sample">
+          <a  href="https://github.com/LeeGee64/occult-library-sample">
             <Image
                 priority
                 src="/Images/logos/GitHub-Mark-Light-64px.png"
                 height= {30}
                 width= {30}
-                className={utilStyles.logo}
                 alt="GitHub"
               />
             </a>
-          <a className={utilStyles.logo} href="https://www.linkedin.com/in/leland-gill">
+          <a href="https://www.linkedin.com/in/leland-gill">
             <Image
                 priority
                 src="/Images/logos/In-Blue-34.png"
                 height= {30}
                 width= {30}
-                className={utilStyles.logo}
                 alt="LinkedIn"
               />
             </a>
