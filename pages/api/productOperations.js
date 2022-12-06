@@ -1,11 +1,4 @@
-// //useSWR allows the use of SWR inside function components
-// import useSWR from 'swr';
-
-// //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
-// const fetcher = (url) => fetch(url).then((res) => res.json());
-// // let apiUrl = '/api/staticdata';
-
-// 
+//creates an array for all product categories
 
 export function getAllCategories(productArray) {
     let categoryArray = [];
