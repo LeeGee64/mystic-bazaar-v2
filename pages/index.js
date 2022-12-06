@@ -1,6 +1,6 @@
 import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
-import getAllProducts from './api/getAllProducts'
+import {getAllCategories} from './api/productOperations'
 import Layout from '/components/layouts/layout' 
 import Preview from '/components/products/preview'
 import useSWR from 'swr';
@@ -17,10 +17,11 @@ const { data, error } = useSWR(apiUrl, fetcher);
     //Handle the loading state
     if (!data) return <div>Loading...</div>;
     
-    let productObject = JSON.parse(data);
-  let productArray = productObject.products;
+    const productObject = JSON.parse(data);
+    const prodArray = productObject.products;
+    let catArray = getAllCategories(prodArray);
+   
 
- 
   return (
       <Layout>
         <section id="intro">
@@ -32,11 +33,14 @@ const { data, error } = useSWR(apiUrl, fetcher);
         <section id="latest">
           <h2>Latest</h2>
           <ul>
-           {productArray.map((p)=> (<li key={p.id}><Preview productItem= {p}/></li>))}
+           {prodArray.map((p)=> (<li key={p.id}><Preview productItem= {p}/></li>))}
           </ul>
         </section>
         <section id="category">
           <h2>Categories</h2>
+          <ul>
+            {catArray.map((p)=> (<li key={p}>{p}</li>))}
+          </ul>
         </section>
         <section id="collection">
           <h2>Collections</h2>
