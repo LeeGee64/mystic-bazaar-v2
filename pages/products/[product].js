@@ -33,7 +33,7 @@ export default function Product() {
                                 height={100}/>
                         {/* Gallery Component Here */}
                         <h1>{productItem.name}</h1>
-                        <>{productItem.descriptionHTML}</>
+                        <p>{productItem.description}</p>
                         <span>{productItem.displayName}</span>
                         <ul>
                             {productItem.options.values.map(
