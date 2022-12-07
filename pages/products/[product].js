@@ -1,6 +1,7 @@
 import Layout from '/components/layouts/layout'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import ProductGallery from '/components/galleries/prodGallery'
 import useSWR from 'swr';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -26,12 +27,12 @@ export default function Product() {
 
         return (
             <Layout> {productItem ? <>
-                        <Image alt={productItem.name} 
+                        {/* <Image alt={productItem.name} 
                                 src={productItem.images[0].url} 
                                 placeholder= "/product-img-placeholder.svg" 
                                 width={100} 
-                                height={100}/>
-                        {/* Gallery Component Here */}
+                                height={100}/> */}
+                        <ProductGallery product= {productItem} />
                         <h1>{productItem.name}</h1>
                         <p>{productItem.description}</p>
                         <span>{productItem.displayName}</span>
