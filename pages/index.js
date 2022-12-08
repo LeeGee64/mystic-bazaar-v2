@@ -4,6 +4,7 @@ import {getAllCategories} from './api/productOperations'
 import Layout from '/components/layouts/layout' 
 import Preview from '/components/products/preview'
 import useSWR from 'swr';
+import Link from 'next/link'
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -37,13 +38,10 @@ const { data, error } = useSWR(apiUrl, fetcher);
           </ul>
         </section>
         <section id="category">
-          <h2>Categories</h2>
+          <Link href='/categories'><h2>Categories</h2></Link>
           <ul>
-            {catArray.map((p)=> (<li key={p}>{p}</li>))}
+            {catArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p}</Link></li>))}
           </ul>
-        </section>
-        <section id="collection">
-          <h2>Collections</h2>
         </section>
         <section id="whatis">
           <h2>What is this Place?</h2>
