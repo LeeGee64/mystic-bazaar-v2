@@ -8,10 +8,6 @@ export default function ProductGallery({ product }) {
  
   const [selectedImage, setSelect] = React.useState(0);
 
-  function setImage(num) {
-    setSelect(num);
-}
-
   return (<>
     <Image  alt={product.name} 
             src= {product.images[selectedImage].url} 

@@ -8,3 +8,12 @@ export function getAllCategories(productArray) {
     let categorySet = [...new Set(categoryArray.flat(1))];  
     return categorySet;
 }
+
+// a smoother way to return properly formatted product price
+
+export function getPrice(currency,value){
+    
+    let finalPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: currency }).format(value);
+    
+    return finalPrice;
+}
