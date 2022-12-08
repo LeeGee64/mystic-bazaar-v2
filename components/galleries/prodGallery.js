@@ -22,12 +22,13 @@ export default function ProductGallery({ product }) {
     <h3>Other Images</h3>
     <ul>
     {product.images.map((p,i)=> {return (
-        <li id={i}>
+        <li key={i} id={i}>
             <Image alt={p.altText}
                     src={p.url}
                     placeholder="/product-img-placeholder.svg" 
                     width={200}
                     height={200}
+                    onClick={ () => setSelect(i)}
                     />
         </li>
     )})}
