@@ -151,7 +151,7 @@
         "name": "Elderflower",
         "path": "/elderflower",
         "slug": "elderflower",
-        "date": "02/02/2022",
+        "date": "03/02/2022",
         "category": ["herbs","sun"],
         "description": "Enjoy this multipurpose herb fresh from ethically sourced farms!",
         "descriptionHtml": "<p><span>Enjoy this multipurpose herb fresh from ethically sourced farms!</span></p>",
@@ -194,8 +194,307 @@
               }
             ]
           }  
+      },{
+        "id": "8JBT5mrGnEdAkSiWL4UGDitm8aDxWR=",
+        "name": "Carnelian",
+        "path": "/carnelian",
+        "slug": "carnelian",
+        "date": "03/02/2022",
+        "category": ["crystals","sun","fire"],
+        "description": "Enjoy this powerful and ethically sourced crystal!",
+        "descriptionHtml": "<p><span>Enjoy this powerful and ethically sourced crystal!</span></p>",
+        "images": [
+          {
+            "url": "/assets/crystals/carnelianstone.jpeg",
+            "altText": "Carnelian Stone",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/crystals/carneliansphere.jpeg",
+            "altText": "Carnelian Sphere",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/crystals/carnelianpillar.jpeg",
+            "altText": "Carnelian Flame",
+            "width": 1000,
+            "height": 1000
+          }
+        ],
+        "options": 
+          {
+            "id": "option-amount",
+            "displayName": "Amount",
+            "values": [
+              {
+                "label": "Stone",
+                "price": { "value": 15, "currencyCode": "USD" }
+              },
+              {
+                "label": "Sphere",
+                "price": { "value": 30, "currencyCode": "USD" }
+              },
+              {
+                "label": "Flame",
+                "price": { "value": 40, "currencyCode": "USD" }
+              }
+            ]
+          }  
+      },{
+        "id": "gGeYL3XTNdUWpa6OkUF0Vi1HKaCVgO=",
+        "name": "Amethyst",
+        "path": "/amethyst",
+        "slug": "amethyst",
+        "date": "01/02/2022",
+        "category": ["crystals","moon"],
+        "description": "Enjoy this powerful and ethically sourced crystal!",
+        "descriptionHtml": "<p><span>Enjoy this powerful and ethically sourced crystal!</span></p>",
+        "images": [
+          {
+            "url": "/assets/crystals/amethystrod.jpeg",
+            "altText": "Amethyst Rod",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/crystals/amethystsphere.jpeg",
+            "altText": "Amethyst Sphere",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/herbs/ametystobelisk.jpeg",
+            "altText": "Amethyst Obelisk",
+            "width": 1000,
+            "height": 1000
+          }
+        ],
+        "options": 
+          {
+            "id": "option-amount",
+            "displayName": "Amount",
+            "values": [
+              {
+                "label": "Rod",
+                "price": { "value": 15, "currencyCode": "USD" }
+              },
+              {
+                "label": "Sphere",
+                "price": { "value": 30, "currencyCode": "USD" }
+              },
+              {
+                "label": "Obelisk",
+                "price": { "value": 40, "currencyCode": "USD" }
+              }
+            ]
+          }  
+      },{
+        "id": "dwFeQnaGL8mKxIqcPjygoeA3cxLT71=",
+        "name": "Quartz",
+        "path": "/quartz",
+        "slug": "quartz",
+        "date": "02/02/2022",
+        "category": ["crystals","air"],
+        "description": "Enjoy this powerful and ethically sourced crystal!",
+        "descriptionHtml": "<p><span>Enjoy this powerful and ethically sourced crystal!</span></p>",
+        "images": [
+          {
+            "url": "/assets/crystals/quartzrod.jpeg",
+            "altText": "Quartz Rod",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/crystals/quartzsphere.jpeg",
+            "altText": "Quartz Sphere",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/crystals/quartzcrystal.jpeg",
+            "altText": "Quartz Tower",
+            "width": 1000,
+            "height": 1000
+          }
+        ],
+        "options": 
+          {
+            "id": "option-amount",
+            "displayName": "Amount",
+            "values": [
+              {
+                "label": "Rod",
+                "price": { "value": 15, "currencyCode": "USD" }
+              },
+              {
+                "label": "Sphere",
+                "price": { "value": 30, "currencyCode": "USD" }
+              },
+              {
+                "label": "Tower",
+                "price": { "value": 40, "currencyCode": "USD" }
+              }
+            ]
+          }  
+      },{
+        "id": "Nsv4ekcsUq6UeTUkIwEdjBJcGPARNF=",
+        "name": "Turqoise",
+        "path": "/turqoise",
+        "slug": "turqoise",
+        "date": "01/02/2022",
+        "category": ["crystals","water"],
+        "description": "Enjoy this powerful and ethically sourced crystal!",
+        "descriptionHtml": "<p><span>Enjoy this powerful and ethically sourced crystal!</span></p>",
+        "images": [
+          {
+            "url": "/assets/crystals/turqoisestone.jpeg",
+            "altText": "Turqoise Stone",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/crystals/turqoisesphere.jpeg",
+            "altText": "Turqoise Sphere",
+            "width": 1000,
+            "height": 1000
+          },
+          {
+            "url": "/assets/crystals/turqoiseobelisk.jpeg",
+            "altText": "Turqoise Obelisk",
+            "width": 1000,
+            "height": 1000
+          }
+        ],
+        "options": 
+          {
+            "id": "option-amount",
+            "displayName": "Amount",
+            "values": [
+              {
+                "label": "Stone",
+                "price": { "value": 10, "currencyCode": "USD" }
+              },
+              {
+                "label": "Sphere",
+                "price": { "value": 25, "currencyCode": "USD" }
+              },
+              {
+                "label": "Obelisk",
+                "price": { "value": 35, "currencyCode": "USD" }
+              }
+            ]
+          }  
+      },{
+        "id": "qWanuOvs8VsjyDBcKSTsx1gtPJ13kl=",
+        "name": "Good Sleep Pouch",
+        "path": "/good-sleep-pouch",
+        "slug": "good-sleep-pouch",
+        "date": "03/02/2022",
+        "category": ["pouches","water"],
+        "description": "Enjoy this powerfully made and ethically sourced spell pouch!",
+        "descriptionHtml": "<p><span>Enjoy this powerfully made and ethically sourced spell pouch!</span></p>",
+        "images": [
+          {
+            "url": "/assets/pouches/goodsleeppouch.jpeg",
+            "altText": "Good Sleep Pouch",
+            "width": 1000,
+            "height": 1000
+          }
+        ],
+        "options": 
+          {
+            "id": "option-amount",
+            "displayName": "Amount",
+            "values": [
+              {
+                "label": "Sm",
+                "price": { "value": 10, "currencyCode": "USD" }
+              },
+              {
+                "label": "Md",
+                "price": { "value": 15, "currencyCode": "USD" }
+              },
+              {
+                "label": "Lg",
+                "price": { "value": 25, "currencyCode": "USD" }
+              }
+            ]
+          }  
+      },{
+        "id": "kaBJR3cR30OJg9IigXEITPm6EYPdNb=",
+        "name": "Protection Pouch",
+        "path": "/protection-pouch",
+        "slug": "protection-pouch",
+        "date": "01/02/2022",
+        "category": ["pouches","earth"],
+        "description": "Enjoy this powerfully made and ethically sourced spell pouch!",
+        "descriptionHtml": "<p><span>Enjoy this powerfully made and ethically sourced spell pouch!</span></p>",
+        "images": [
+          {
+            "url": "/assets/pouches/protectionpouch.jpeg",
+            "altText": "Protection Pouch",
+            "width": 1000,
+            "height": 1000
+          }
+        ],
+        "options": 
+          {
+            "id": "option-amount",
+            "displayName": "Amount",
+            "values": [
+              {
+                "label": "Sm",
+                "price": { "value": 10, "currencyCode": "USD" }
+              },
+              {
+                "label": "Md",
+                "price": { "value": 15, "currencyCode": "USD" }
+              },
+              {
+                "label": "Lg",
+                "price": { "value": 25, "currencyCode": "USD" }
+              }
+            ]
+          }  
+      },{
+        "id": "kCMylyRTIWblXvPC3NdyVZarXpoNfW=",
+        "name": "Wisdom Pouch",
+        "path": "/wisdom-pouch",
+        "slug": "wisdom-pouch",
+        "date": "02/02/2022",
+        "category": ["pouches","air","sun"],
+        "description": "Enjoy this powerfully made and ethically sourced spell pouch!",
+        "descriptionHtml": "<p><span>Enjoy this powerfully made and ethically sourced spell pouch!</span></p>",
+        "images": [
+          {
+            "url": "/assets/pouches/wisdompouch.jpeg",
+            "altText": "Wisdom Pouch",
+            "width": 1000,
+            "height": 1000
+          }
+        ],
+        "options": 
+          {
+            "id": "option-amount",
+            "displayName": "Amount",
+            "values": [
+              {
+                "label": "Sm",
+                "price": { "value": 10, "currencyCode": "USD" }
+              },
+              {
+                "label": "Md",
+                "price": { "value": 15, "currencyCode": "USD" }
+              },
+              {
+                "label": "Lg",
+                "price": { "value": 25, "currencyCode": "USD" }
+              }
+            ]
+          }  
       }
-  
      
     ]
   }
