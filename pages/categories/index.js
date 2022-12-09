@@ -19,14 +19,33 @@ const { data, error } = useSWR(apiUrl, fetcher);
     const productObject = JSON.parse(data);
     const prodArray = productObject.products;
     let catArray = getAllCategories(prodArray);
-   
+    let majArray = ["herbs","crystals","pouches"];
+    let elArray = catArray.filter((p)=>{if(!majArray.includes(p)){return p}})
+                          .sort((a, b) => a.localeCompare(b));
 
   return (
       <Layout>
         <h1>Categories</h1>
-
+        
+        <h2>Product Categories</h2>
         <ul>
-            {catArray.map((c)=>{return (
+            {majArray.map((c)=>{return (
+                <li key={c}>
+                    <Link href= {`/categories/${c}`}><h2>{c.toUpperCase()}</h2></Link>
+                    <ul>
+                        {prodArray.map((p)=> {if(p.category.includes(c)){return (
+                            <li key={p.id}>
+                                <Preview productItem={p}/>
+                            </li>
+                        )}})}
+                    </ul>
+                </li>
+            )})}
+        </ul>
+
+        <h2>Elements</h2>
+        <ul>
+            {elArray.map((c)=>{return (
                 <li key={c}>
                     <Link href= {`/categories/${c}`}><h2>{c.toUpperCase()}</h2></Link>
                     <ul>

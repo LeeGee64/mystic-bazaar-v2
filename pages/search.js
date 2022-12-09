@@ -26,7 +26,8 @@ export default function Search(){
 
     let catArray = getAllCategories(prodArray);
     let majArray = ["herbs","crystals","pouches"];
-    let elArray = catArray.filter((p)=>{if(!majArray.includes(p)){return p}});
+    let elArray = catArray.filter((p)=>{if(!majArray.includes(p)){return p}})
+                          .sort((a, b) => a.localeCompare(b));
 
 
   function searchTextChange(e){
