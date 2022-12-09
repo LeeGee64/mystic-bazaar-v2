@@ -1,6 +1,6 @@
 import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
-import {getAllCategories} from './api/productOperations'
+// import {getAllCategories} from './api/productOperations'
 import Layout from '/components/layouts/layout' 
 import Preview from '/components/products/preview'
 import useSWR from 'swr';
