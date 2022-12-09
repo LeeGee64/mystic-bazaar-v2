@@ -40,7 +40,7 @@ const { data, error } = useSWR(apiUrl, fetcher);
         <section id="category">
           <Link href='/categories'><h2>Categories</h2></Link>
           <ul>
-            {catArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p}</Link></li>))}
+            {catArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
           </ul>
         </section>
         <section id="whatis">

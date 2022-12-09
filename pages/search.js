@@ -61,11 +61,11 @@ export default function Search(){
             <h2><Link href= "/categories">Categories</Link></h2>
             <h3>Product Groups</h3>
                 <ul>
-                {majArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p}</Link></li>))}
+                {majArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
                 </ul>
             <h3>Elements</h3>
                 <ul>
-                {elArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p}</Link></li>))}
+                {elArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
                 </ul>
 
             <form onSubmit={e => e.preventDefault()}>
