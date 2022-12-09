@@ -20,7 +20,7 @@ const { data, error } = useSWR(apiUrl, fetcher);
     
     const productObject = JSON.parse(data);
     const prodArray = productObject.products;
-    let catArray = getAllCategories(prodArray);
+    let catArray = ["herbs","crystals","pouches"];
    
 
   return (
