@@ -494,8 +494,29 @@
               }
             ]
           }  
+      } 
+    ],
+
+    "catdescription": [
+      {
+          "name": "air",
+          "description": "The element of ideas, dreams, and messages. Use these products for inspiration."
+      },{
+          "name": "earth",
+          "description": "The element of health, anchoring, and the past. Use these products to find rooted truths."
+      },{
+          "name": "water",
+          "description": "The element of life, movement, and change. Use these products to resfresh your perspective."
+      },{
+          "name": "fire",
+          "description": "The element of energy, passion, and knowledge. Use these products to spark change."
+      },{
+          "name": "sun",
+          "description": "The element of Divine power and Ultimate knowledge. Use these products to connect to Higher Power."
+      },{
+          "name": "moon",
+          "description": "The element of shadows and inner knowledge. Use these products to journey into the self."
       }
-     
-    ]
+  ]
   }
   

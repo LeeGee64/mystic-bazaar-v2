@@ -7,7 +7,7 @@ import useSWR from 'swr';
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
-let apiUrl = './api/staticdata';
+let apiUrl= './api/staticdata';
 
 const { data, error } = useSWR(apiUrl, fetcher);
 
@@ -22,6 +22,7 @@ const { data, error } = useSWR(apiUrl, fetcher);
     let majArray = ["herbs","crystals","pouches"];
     let elArray = catArray.filter((p)=>{if(!majArray.includes(p)){return p}})
                           .sort((a, b) => a.localeCompare(b));
+                    
 
   return (
       <Layout>

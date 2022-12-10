@@ -7,13 +7,13 @@ import useSWR from 'swr';
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Category() {
-    let apiUrl = '/api/staticdata';
+    let apiData = '/api/staticdata';
     const router = useRouter()
     const {category}  = router.query
   
     
-    const { data, error } = useSWR({category} ? apiUrl : null,fetcher);
-    
+    const { data, error } = useSWR({category} ? apiData : null,fetcher);
+ 
         //Handle the error state
         if (error) return <div>Failed to load</div>;
         //Handle the loading state
@@ -24,11 +24,14 @@ export default function Category() {
 
         const catArray = getAllCategories(prodArray);
         const selectedCat = catArray.find((p) => p === category);
-       
+        
+     
+        const descArray = productObject.catdescription;
+        const selectDesc = descArray.find((d)=> d.name === selectedCat)?.description;
 
         return (selectedCat ? <Layout>
                                 <h1>{selectedCat.toUpperCase()}</h1>
-                                <p>Custom Descriptor</p>
+                                <p>{!selectDesc ? 'Enjoy these ethically sourced and created product!': selectDesc}</p>
                                 <ul>
                                 {prodArray.map((p)=> {if(p.category.includes(selectedCat)){return (
                             <li key={p.id}>

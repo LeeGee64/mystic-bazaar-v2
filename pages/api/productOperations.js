@@ -17,3 +17,10 @@ export function getPrice(currency,value){
     
     return finalPrice;
 }
+
+//pulls out Date value from porducts
+export function getDate(productDate){
+    let dateValue = 0;
+
+    return dateValue;
+}
