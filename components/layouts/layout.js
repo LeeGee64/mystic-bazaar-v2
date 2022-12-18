@@ -21,21 +21,21 @@ export default function Layout({children}) {
         <meta name="og:title" content={siteTitle} />
       </Head>
 
-      <header >
+      <header class="my-10 flex flex-col justify-center space-y-3 sm:flex-row sm:justify-between sm:px-20">
             
-      <h1 id="top" >
+      <h1 class= "self-center text-center mx-5" id="top" >
         <Link href="/">
           {siteTitle}
         </Link>
       </h1>
-      <nav>
-          <ul>
-            <li id="Home">
+      <nav class="self-center">
+          <ul class="flex flex-row space-x-2">
+            <li class="sm:m-5" id="Home">
               <Link href= '/'>
                Home
               </Link>
             </li>
-            <li id="BookSearch">
+            <li class="sm:m-5" id="Search">
               <Link href= '/search'>
                   Search
               </Link>
@@ -45,11 +45,11 @@ export default function Layout({children}) {
       </header>
     
 
-      <main >{children}</main>
+      <main class="mx-10">{children}</main>
       
       
-      <footer id="footer">
-        <div>
+      <footer class= "my-10">
+        <div class= "flex flex-row justify-center gap-10" id="footer">
           <a href="https://twitter.com/LeeGee64">
           <Image
                 priority
