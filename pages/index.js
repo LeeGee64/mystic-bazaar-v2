@@ -34,7 +34,15 @@ const { data, error } = useSWR(apiUrl, fetcher);
         <section id="latest">
           <h2>Latest</h2>
           <ul>
-           {prodArray.map((p)=> (<li key={p.id}><Preview productItem= {p}/></li>))}
+           {prodArray
+           .sort((a,b)=>{
+              const date1 = new Date(a.date);
+              const date2 = new Date(b.date);
+
+              return date2 -date1;
+           })
+           .slice(0,5)
+           .map((p)=> (<li key={p.id}><Preview productItem= {p}/></li>))}
           </ul>
         </section>
         <section id="category">
