@@ -19,8 +19,15 @@ export function getPrice(currency,value){
 }
 
 //pulls out Date value from porducts
-export function getDate(productDate){
-    let dateValue = 0;
+export function getLatest(productArray,num){
+    let sortedDateArray = productArray
+    .sort((a,b)=>{
+       const date1 = new Date(a.date);
+       const date2 = new Date(b.date);
 
-    return dateValue;
+       return date2 -date1;
+    })
+    .slice(0,num);
+
+    return sortedDateArray;
 }
