@@ -27,11 +27,6 @@ const { data, error } = useSWR(apiUrl, fetcher);
       <Layout>
         <section id="latest">
           <h2>Latest</h2>
-          {/* <ul class="flex flex-row">
-            {getLatest(prodArray,5)
-            .map((p)=> (<li key={p.id}><Preview productItem= {p}/></li>))}
-          </ul>
-          <br></br> */}
           <LateGallery lateArray={getLatest(prodArray,5)}/>
         </section>
         <section  id="category">
