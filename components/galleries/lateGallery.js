@@ -1,5 +1,4 @@
 import Preview from "../products/preview";
-import Image from 'next/image'
 
 
 export default function LateGallery({lateArray}){
@@ -16,7 +15,7 @@ export default function LateGallery({lateArray}){
                 {followProduct.map((p)=> (
                     <Preview productItem={p}/>))}
                 </div>
-                
+
             </div>
     )
 }
