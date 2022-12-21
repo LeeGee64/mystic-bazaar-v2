@@ -26,17 +26,21 @@ export default function Product() {
        
 
         return (
-            <Layout> {productItem ? <>
+            <Layout> {productItem ? <div class="relative grid grid-cols-2 h-screen">
+                     
                         <ProductGallery product= {productItem} />
-                        <h1>{productItem.name}</h1>
-                        <p>{productItem.description}</p>
-                        <span>{productItem.displayName}</span>
-                        <ul>
-                            {productItem.options.values.map(
-                                (p)=> <li key= {p.label}>{p.label} :  
-                                {getPrice(p.price.currencyCode, p.price.value)}</li>)}
-                        </ul>
-                        </> : <h2>Sorry, that product doesn't exist.</h2>}
+
+                        <div class="relative">
+                            <h1>{productItem.name}</h1>
+                            <p>{productItem.description}</p>
+                            <span>{productItem.displayName}</span>
+                            <ul>
+                                {productItem.options.values.map(
+                                    (p)=> <li key= {p.label}>{p.label} :  
+                                    {getPrice(p.price.currencyCode, p.price.value)}</li>)}
+                            </ul>
+                        </div>
+                        </div> : <h2>Sorry, that product doesn't exist.</h2>}
 
             </Layout>
         )

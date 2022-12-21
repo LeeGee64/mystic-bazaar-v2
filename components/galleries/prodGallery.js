@@ -8,27 +8,27 @@ export default function ProductGallery({ product }) {
  
   const [selectedImage, setSelect] = React.useState(0);
 
-  return (<>
+  return (<div class="grid sm:grid-rows-4 sm:max-h-[400px] sm:gap-y-2">
+    <div class="relative h-full row-span-3">
     <Image  alt={product.name} 
             src= {product.images[selectedImage].url} 
             placeholder="/product-img-placeholder.svg" 
-            width={500} 
-            height={500} 
+            fill
+            objectFit="cover" 
             priority/>
-    <h3>Other Images</h3>
-    <ul>
+    </div>
+    <div class="grid sm:grid-cols-3 sm:gap-x-2">
     {product.images.map((p,i)=> {return (
-        <li key={i} id={i}>
+        <div class="h-full relative" key={i} id={i}>
             <Image alt={p.altText}
                     src={p.url}
                     placeholder="/product-img-placeholder.svg" 
-                    width={200}
-                    height={200}
+                    fill
+                    objectFit="cover"
                     onClick={ () => setSelect(i)}
                     />
-        </li>
+        </div>
     )})}
-    </ul>
-
-    </>)
+    </div>
+    </div>)
 }
