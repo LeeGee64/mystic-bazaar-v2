@@ -30,15 +30,15 @@ export default function Category() {
         const selectDesc = descArray.find((d)=> d.name === selectedCat)?.description;
 
         return (selectedCat ? <Layout>
-                                <h1>{selectedCat.toUpperCase()}</h1>
-                                <p>{!selectDesc ? 'Enjoy these ethically sourced and created product!': selectDesc}</p>
-                                <ul>
+                                <h1 class="text-center">{selectedCat.toUpperCase()}</h1>
+                                <p class="text-center p-5">{!selectDesc ? 
+                                'Enjoy these ethically sourced and created product!': selectDesc}</p>
+                                <div class="py-2 grid gap-5 sm:grid-cols-3">
                                 {prodArray.map((p)=> {if(p.category.includes(selectedCat)){return (
-                            <li key={p.id}>
-                                <Preview productItem={p}/>
-                            </li>
-                        )}})}
-                                </ul>
+                                        <div class="h-40 sm:h-60">
+                                        <Preview productItem={p}/>
+                                        </div>)}})}
+                                </div>
                             </Layout> 
                 : <h1>Sorry, this Category does not exist.</h1>)
 

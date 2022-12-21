@@ -15,7 +15,7 @@ export default function Preview({productItem}) {
     
     // <Link class="max-h-full" href= {`/products/${productItem.slug}`}></Link>
    
-    <div class="relative" key={productItem.id} id={productItem.name}>
+    <div class="relative h-full" key={productItem.id} id={productItem.name}>
      <Link href= {`/products/${productItem.slug}`}>
         <Image alt={productItem.name} 
                 src={productItem.images[0].url} 
