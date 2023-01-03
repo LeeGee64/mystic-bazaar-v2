@@ -8,7 +8,7 @@ export default function ProductGallery({ product }) {
  
   const [selectedImage, setSelect] = React.useState(0);
 
-  return (<div class="grid sm:grid-rows-4 sm:max-h-[400px] sm:gap-y-2">
+  return (<div class="grid sm:grid-rows-4 sm:max-h-[400px] sm:w-[400px] sm:gap-y-2">
     <div class="relative h-full row-span-3">
     <Image  alt={product.name} 
             src= {product.images[selectedImage].url} 
