@@ -47,8 +47,13 @@ export default function Product() {
                                     </li>)}
                         </ul>
                         <h3>Similar Items</h3>
-                        <div class="flex flex-row">
-                            
+                        <div class="grid grid-cols-3 gap-3 h-[100px] relative">
+                            {prodArray.filter((p)=> {
+                                if(p.id !== productItem.id){ if(p.category.includes(productItem.category[1]) 
+                                    || p.category.includes(productItem.category[0])){
+                                        return (p)
+                                }}
+                            }).slice(0,3).map((p)=>(<Preview productItem={p}/>))}
                         </div>
                     </div>
                 </div>: <h2>Sorry, that product doesn't exist.</h2>}
