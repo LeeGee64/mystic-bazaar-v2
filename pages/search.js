@@ -43,8 +43,7 @@ export default function Search(){
         setSearchArray(searchArray.length = 0); 
 
         resultArray = prodArray
-            .filter(sr => {if(sr.name.match(regex)){return sr}})
-            .map(sr => {return (<li key= {sr.id} id={sr.id}><Preview productItem= {sr}/></li>)});
+            .filter(sr => {if(sr.name.match(regex)){return sr}});
     
         
         if(resultArray.length){
@@ -57,23 +56,30 @@ export default function Search(){
 
     return (
         <Layout>
-            <h1>Search</h1>
-            <h2><Link href= "/categories">Categories</Link></h2>
-            <h3>Product Groups</h3>
-                <ul>
-                {majArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
-                </ul>
-            <h3>Elements</h3>
-                <ul>
-                {elArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
-                </ul>
+            <div class="flex flex-row">
+                <section class="flex flex-col gap-3">
+                    <h1>Search</h1>
+                    <h2><Link href= "/categories">Categories</Link></h2>
+                    <h3>Product Groups</h3>
+                        <ul>
+                        {majArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
+                        </ul>
+                    <h3>Elements</h3>
+                        <ul>
+                        {elArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
+                        </ul>
+                </section>
 
-            <form onSubmit={e => e.preventDefault()}>
+                <section class="grow">
+                <form onSubmit={e => e.preventDefault()}>
 
-            <input id="searchText" name="searchText" placeholder= "Enter Text" onChange= {e => {searchTextChange(e)}} value={searchContent}></input>
+                <input id="searchText" name="searchText" placeholder= "Enter Text" onChange= {e => {searchTextChange(e)}} value={searchContent}></input>
 
-            <ul>{searchArray}</ul>
-        </form>
+                <div class="grid grid-rows-1 relative">{searchArray.map(sr => {return (<div key= {sr.id} id={sr.id} class="h-[100px] w-[200px] relative">
+                <Preview productItem= {sr}/></div>)})}</div>
+            </form>
+            </section>
+        </div>
         </Layout>
     )
 }
