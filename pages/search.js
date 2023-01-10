@@ -70,14 +70,20 @@ export default function Search(){
                         </ul>
                 </section>
 
-                <section class="grow">
+                <section class="grow grid gap-0 justify-items-center">
                 <form onSubmit={e => e.preventDefault()}>
 
-                <input id="searchText" name="searchText" placeholder= "Enter Text" onChange= {e => {searchTextChange(e)}} value={searchContent}></input>
-
-                <div class="grid grid-rows-1 relative">{searchArray.map(sr => {return (<div key= {sr.id} id={sr.id} class="h-[100px] w-[200px] relative">
+                <input  id="searchText" name="searchText" placeholder= "Search"
+                        class="mb-[0.3rem]"
+                        onChange= {e => {searchTextChange(e)}} 
+                        value={searchContent}>
+                </input>
+                </form>
+                <div class="grid grid-cols-3 relative w-full">
+                {searchArray
+                .map(sr => {return (<div key= {sr.id} id={sr.id} class="h-[100px] w-[200px] relative m-0">
                 <Preview productItem= {sr}/></div>)})}</div>
-            </form>
+           
             </section>
         </div>
         </Layout>
