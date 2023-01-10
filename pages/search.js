@@ -57,7 +57,7 @@ export default function Search(){
     return (
         <Layout>
             <div class="flex flex-row">
-                <section class="flex flex-col gap-3">
+                <section class="flex flex-col gap-3 m-[2rem]">
                     <h1>Search</h1>
                     <h2><Link href= "/categories">Categories</Link></h2>
                     <h3>Product Groups</h3>
@@ -70,19 +70,21 @@ export default function Search(){
                         </ul>
                 </section>
 
-                <section class="grow grid gap-0 justify-items-center">
-                <form onSubmit={e => e.preventDefault()}>
+                <section class="grow p-[2rem]">
+                <form class="w-4/5 grid justify-items-center" 
+                    onSubmit={e => e.preventDefault()}>
 
                 <input  id="searchText" name="searchText" placeholder= "Search"
                         class="mb-[0.3rem]"
                         onChange= {e => {searchTextChange(e)}} 
                         value={searchContent}>
                 </input>
-                </form>
-                <div class="grid grid-cols-3 relative w-full">
+                
+                <div class="grid grid-cols-3 relative">
                 {searchArray
-                .map(sr => {return (<div key= {sr.id} id={sr.id} class="h-[100px] w-[200px] relative m-0">
+                .map(sr => {return (<div key= {sr.id} id={sr.id} class="h-[150px] w-[300px] relative m-[5px]">
                 <Preview productItem= {sr}/></div>)})}</div>
+                </form>
            
             </section>
         </div>
