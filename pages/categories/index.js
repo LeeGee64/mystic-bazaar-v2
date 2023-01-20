@@ -26,16 +26,16 @@ const { data, error } = useSWR(apiUrl, fetcher);
 
   return (
       <Layout>
-        <h1>Categories</h1>
+        <h1 class="w-full text-center my-[2rem]">Categories</h1>
         
-        <h2>Product Categories</h2>
-        <ul>
+        <h2 class="ml-[2rem] mb-[1rem]">Product Categories</h2>
+        <ul class="ml-[3rem] mb-[5rem]">
             {majArray.map((c)=>{return (
-                <li key={c}>
-                    <Link href= {`/categories/${c}`}><h2>{c.toUpperCase()}</h2></Link>
-                    <ul>
+                <li class="my-[1rem]" key={c}>
+                    <Link href= {`/categories/${c}`}><h2 class="mb-[1rem]">{c.toUpperCase()}</h2></Link>
+                    <ul class="flex flex-row h-[8rem] overflow-scroll">
                         {prodArray.map((p)=> {if(p.category.includes(c)){return (
-                            <li key={p.id}>
+                            <li class="relative h-full w-[12rem] mx-[1rem]" key={p.id}>
                                 <Preview productItem={p}/>
                             </li>
                         )}})}
@@ -44,14 +44,14 @@ const { data, error } = useSWR(apiUrl, fetcher);
             )})}
         </ul>
 
-        <h2>Elements</h2>
-        <ul>
+        <h2 class="ml-[2rem] mb-[1rem]">Elements</h2>
+        <ul class="ml-[5rem]">
             {elArray.map((c)=>{return (
-                <li key={c}>
-                    <Link href= {`/categories/${c}`}><h2>{c.toUpperCase()}</h2></Link>
-                    <ul>
+                <li class="my-[1rem]" key={c}>
+                    <Link href= {`/categories/${c}`}><h2 class="mb-[1rem]">{c.toUpperCase()}</h2></Link>
+                    <ul class="flex flex-row h-[8rem] overflow-scroll">
                         {prodArray.map((p)=> {if(p.category.includes(c)){return (
-                            <li key={p.id}>
+                            <li class="relative h-full w-[12rem] mx-[1rem]" key={p.id}>
                                 <Preview productItem={p}/>
                             </li>
                         )}})}
