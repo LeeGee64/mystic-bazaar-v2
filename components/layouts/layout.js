@@ -20,7 +20,7 @@ export default function Layout({children}) {
         <meta name="og:title" content={siteTitle} />
       </Head>
 
-      <header class="my-10 flex flex-col justify-center space-y-3 sm:flex-row sm:justify-between sm:px-20">
+      <header class="py-10 flex flex-col justify-center space-y-3 bg-fuchsia-500 sm:flex-row sm:justify-between sm:px-20">
             
       <h1 class= "self-center text-center mx-5" id="top" >
         <Link href="/">
@@ -44,10 +44,10 @@ export default function Layout({children}) {
       </header>
     
 
-      <main class="mx-10">{children}</main>
+      <main class="px-10">{children}</main>
       
       
-      <footer class= "my-10">
+      <footer class= "py-[3rem] bg-black">
         <div class= "flex flex-row justify-center gap-10" id="footer">
           <a href="https://twitter.com/LeeGee64">
           <Image

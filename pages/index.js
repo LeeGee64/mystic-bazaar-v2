@@ -29,14 +29,14 @@ const { data, error } = useSWR(apiUrl, fetcher);
           <LateGallery lateArray={getLatest(prodArray,5)}/>
         </section>
 
-        <section class="my-[2rem]" id="category">
+        <section class="my-[2rem] bg-emerald-600" id="category">
           <Link href='/categories'><h2 class="mb-[1rem] w-full text-center">Categories</h2></Link>
           <ul class="flex flex-row justify-evenly">
             {catArray.map((p)=> (<li key={p}><Link href= {`/categories/${p}`}>{p.toUpperCase()}</Link></li>))}
           </ul>
         </section>
 
-        <section class="my-[2rem]" id="whatis">
+        <section class="py-[2rem]" id="whatis">
           <h2 class="mb-[1rem] w-full text-center">What is this Place?</h2>
           <div class="flex flex-row">
             <Image alt="the bazaar" src="/bazaar.jpeg" placeholder="/product-img-placeholder.svg" width={500} height={500} />
