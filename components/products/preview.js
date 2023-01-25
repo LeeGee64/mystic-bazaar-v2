@@ -9,7 +9,8 @@ export default function Preview({productItem}) {
      <Link href= {`/products/${productItem.slug}`}>
         <Image alt={productItem.name} 
                 src={productItem.images[0].url} 
-                placeholder= "/product-img-placeholder.svg" 
+                placeholder= "blur"
+                blurDataURL={'data:/product-img-placeholder.svg'} 
                 fill
                 objectFit= "cover"
                 priority
